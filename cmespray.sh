@@ -22,7 +22,7 @@ checkpwns () {
     else
         echo "[-] No successful logins."
     fi
-    cat cmespray_output.txt | grep "LOCKOUT" 2>/dev/null
+    cat cmespray_output.txt | grep "STATUS_ACCOUNT_LOCKED_OUT" 2>/dev/null
     if [ $? == 0 ]; then
         echo "[!] LOCKOUT DETECTED. EXITING."
         exit
